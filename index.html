@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SCG Website</title>
+        <style>
+            body {
+                background: rgb(240, 248, 255);
+                color: rgb(45, 45, 45);
+                padding: 10px;
+                font-family: arial;
+            }
+            header {
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+            #top_header {
+                text-align: center;
+                
+                padding-left:60px;
+            }
+             .bg {
+                background-image: url("http://vanhoutenillustration.com/wordpress/wp-content/uploads/2013/11/Abstract-Gloomy-Landscape-Speed-Painting.png");
+                height: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                opacity:1;
+                margin-top: 10px;
+            }
+            /*navigation menu*/
+            nav {
+                background: rgb(3, 3, 5);
+                margin: 0 auto;
+                display: flex;
+                margin-bottom: 20px;
+                padding: 10px;
+                border: 3px solid rgb(119, 136, 153);
+                border-radius: 50px 20px;
+                
+            }  
+            nav header {
+                display: flex;
+                align-items: center;
+                color: rgb(255, 255, 255);
+                flex: 1;
+                text-align: center;
+            }
+            nav li {
+                display: inline-block;
+                padding: 0 10px;
+            }
+            nav a {
+                text-decoration: none;
+                color: #fff;
+                font-size: 20px;
+                
+            }
+            .btn {
+                padding-right: 25px;
+            }
+            #Home_btn {
+                border-style: outset;
+        
+            }
+           #Portfolio_btn  {
+               border-style: outset;
+              
+           }
+           /* Background image*/
+            
+            
+            
+            /* main container area beneath menu */
+            main {
+                background: rgb(192, 192, 195);
+            }
+            .sidebar {
+                margin-right: 25px;
+                display: flex;
+                padding:25px;
+                
+                
+            }
+            .sidebar img {
+                width: 250px;
+                height: 200%;
+                border-style: outset;
+            }
+            .content {
+                flex:1;
+                padding: 15px;
+                color: rgb( 0, 0, 0);
+                
+                
+            }
+            .interests header {
+                font-size: 1.25em;
+                opacity:1;
+            }
+            
+        </style>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                
+            });
+        </script>
+    </head>
+    <body>
+        <div id="all contents">
+            <nav>
+                <header id="top_header">Sebastian Correa Gomez's website</header>
+                <ul class="btn">
+                    <li id="Home_btn"><a href="index.html">Home</a></li>
+                    <li id="Portfolio_btn"><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </nav>
+            <main>
+                <div class="sidebar">
+                   <img src="img/wanderer_above_the_sea_of_fog.jpg"> 
+                </div>
+                <div class="content">
+                    <header>Sebastian Correa Gomez</header>
+                    <p>Student at Mandeville High</p>
+                    <section class="interests">
+                        <header>Interests</header>
+                        <ul>
+                            <li>drawing</li>
+                            <li>reading</li>
+                            <li>Netflix</li>
+                        </ul>
+                    </section>
+                </div>
+            </main>
+            <main>
+                <div class = "content">
+                    <header>Professional Interests</header>
+                    <section class = "interests">
+                        <button>Use to see my professional interests</button>
+                        <ul>
+                            <li>JavaScript Web Development</li>
+                            <li>Virology  and Biochemistry</li>
+                            <li>Physics and Robotics</li>
+                        </ul>
+                    </section>
+                </div>
+            </main>
+        </div>
+         <div class="bg">
+            <background-image src="http://vanhoutenillustration.com/wordpress/wp-content/uploads/2013/11/Abstract-Gloomy-Landscape-Speed-Painting.png">
+        </div>
+    </body>
+</html>

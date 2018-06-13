@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>SCG [Port] Website</title>
+        <style type="text/css">
+            body {
+                background: rgb(240, 248, 255);
+                color: rgb(45, 45, 45);
+                padding: 10px;
+                font-family: arial;
+            }
+            header {
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+            #top_header {
+                padding-left:60px;
+            }
+            #all-contents {
+                max-width: 800px;
+                margin: auto;
+            }
+            h1 {
+                text-align: center;
+            }
+            
+            /*navigation menu*/
+            nav {
+                background: rgb(3, 3, 5);
+                margin: 0 auto;
+                margin-bottom: 20px;
+                display:flex;
+                padding: 10px;
+                border: 3px solid rgb(119, 136, 153);
+                border-radius: 50px 20px;
+            }  
+            nav header {
+                display: flex;
+                align-items: center;
+                color: rgb(255, 255, 255);
+                flex: 1;
+            }
+            nav ul {
+                list-style-image: none;
+            }
+            nav li {
+                display: inline-block;
+                padding: 0 10px;
+            }
+            nav a {
+                text-decoration: none;
+                color: #fff;
+                font-size: 20px;
+            }
+            .btn {
+                padding-right:25px;
+            }
+            #Home_btn {
+                border-style: outset;
+            }
+            #Portfolio_btn {
+                border-style: outset;
+            }
+            body, html {
+                height:100%;
+            }
+            .bg  {
+                background-image: url("http://vanhoutenillustration.com/wordpress/wp-content/uploads/2013/11/Abstract-Gloomy-Landscape-Speed-Painting.png");
+                height: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-top: 10px;
+                opacity: 1;
+            }
+            
+            /* main container area beneath menu */
+            main {
+                background: rgb(192, 192, 195);
+                display: flex;
+            }
+            .sidebar {
+                margin-right: 25px;
+                padding: 10px;
+            }
+            .sidebar img {
+                width: 200px;
+            }
+            .content {
+                flex:1;
+                padding: 15px;
+                color: rgb( 0, 0, 0);
+            }
+            .interests header {
+                font-size: 1.25em;
+            }
+            #portfolio {
+                list-style-type: none;
+                padding-left: 0;
+            }
+            #portfolio li {
+                background: #fff;
+                padding: 10px;
+                border-radius: 10px;
+                margin-bottom: 10px;
+            }
+            #portfolio li:hover{
+                background: #eee;
+            }
+            #portfolio a {
+                text-decoration: none;
+                color: #454545;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <nav>
+            <header id="top_header">Sebastian Correa Gomez's Website</header>
+            <ul class="btn">
+                <li id="Home_btn"><a href="index.html">Home</a>
+                </li>
+                <li id="Portfolio_btn"><a href="portfolio.html">Portfolio</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <div id="all-contents">
+                <h1>Portfolio</h1>
+                <ul id="portfolio">
+                </ul>
+            </div>
+            
+        </main>
+    <div class="bg">
+         <background-image src="http://vanhoutenillustration.com/wordpress/wp-content/uploads/2013/11/Abstract-Gloomy-Landscape-Speed-Painting.png">
+     </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script id="portfolioScript">$(document).ready(function() {$.getJSON('projects/projects.json').then(function(data) { data.projects.forEach(function(project){ $('#portfolio').append('<li><a href="projects/' + project.name + '/">' + project.title + ' : ' + project.description + '</a></li>'); }); }); });</script>
+    </body>
+</html>
